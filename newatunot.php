@@ -16,20 +16,20 @@ if($calculo == "Atualizar"){
 	$q = "delete from expe where id = '$codigo'";
 }
 
-
 $exec = mysqli_query($con, $q);
 
 if($exec){
- 		echo "Executado com sucesso!";
- 		?>
- 		
- 		<script type="text/javascript">
-	window.alert("foi");
-	window.location.href='index.php'
+?>
+ 	<script type="text/javascript">
+		window.alert("Ação realizada");
+		window.location.href='index.php'
 	</script>
-
-	<?php
+<?php
  		}else{
- 			echo "erro na execução";
+?>
+		<script type="text/javascript">
+			window.alert("não foi");
+		</script>
+<?php
  		}
 ?>

@@ -25,8 +25,19 @@ body{
     
     <?php
 
+session_start();
+        if(!isset($_SESSION['usuario'])==TRUE 
+                and (!isset($_SESSION['senha'])==TRUE)){
+                
+                unset($_SESSION['usuario']);
+                unset($_SESSION['senha']);
+                
+                echo "Acesso negado";
+        }else{
+        
+        $logado= $_SESSION['usuario'];
 
-$con = mysqli_connect("localhost", "root", "vertrigo", "curic");
+    $con = mysqli_connect("localhost", "root", "vertrigo", "curic");
 
     $botao = filter_input(INPUT_POST, "botao");
 
@@ -54,7 +65,7 @@ for($i=0; $i<$linhas; $i++){
     </tr>
 </table>
     <?php
-        }
+        }}
     ?>
 </body>
 </html>

@@ -15,7 +15,7 @@ $exe = mysqli_query($con, $cad);
 if ($exe) {
 ?>
 	<script type="text/javascript">
-	window.alert("ação realizada");
+	window.alert("Ação realizada");
 	window.location.href='index.php'
 	</script>
 
@@ -26,7 +26,7 @@ if ($exe) {
 ?>
 
 <script type="text/javascript">
-	window.alert("ação não realizada");
+	window.alert("Ação não realizada");
 	window.location.href='index.php'
 	</script>
 

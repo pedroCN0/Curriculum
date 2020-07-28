@@ -18,11 +18,23 @@
 <body>
 
 <?Php 
+session_start();
+        if(!isset($_SESSION['usuario'])==TRUE 
+                and (!isset($_SESSION['senha'])==TRUE)){
+                
+                unset($_SESSION['usuario']);
+                unset($_SESSION['senha']);
+                
+                echo "Acesso negado";
+        }else{
+        
+        $logado= $_SESSION['usuario'];
+
     $con = mysqli_connect("localhost", "root", "vertrigo", "curic");
 ?>
 
 <div id="corpoapp7">
-	<center><h2>Painel de currículo de Pedro Campos Novais</h2></center> 
+	<center><h2>Painel de currículo de  <?php echo "$logado";?> </h2></center>
 </div>
 
 <div id="corpoapp1">
@@ -155,7 +167,7 @@
      		   </form>
     </div> 
 	<?php
-}
+        }}
 	?>
 </div>
 </body>

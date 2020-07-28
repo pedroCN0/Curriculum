@@ -1,3 +1,7 @@
+
+INSERT INTO `expe` (`cargo`, `experi`) VALUES
+('', '');
+
 drop database curic;
 
 create database curic;
@@ -10,6 +14,15 @@ cargo char(50),
 experi varchar(500)
 );
 
+INSERT INTO `expe` (`cargo`, `experi`) VALUES
+('Trabalho voluntário', 'Desenvolvimento de nova estrutura estética para o site da etec juscelino kubitschek de oliveira');
+
+INSERT INTO `expe` (`cargo`, `experi`) VALUES
+('GERENTE DE CONTEÚDO DIGITAL', 'Responsável pelas publicaçoes no Twitter da ABEMD - Associação Brasileira de Marketing de Dados');
+
+INSERT INTO `expe` (`cargo`, `experi`) VALUES
+('CONSULTOR TÉCNICO', 'Consultor responsável pelo melhoramento de rede da empresa Santa Jóias');
+
 CREATE TABLE IF NOT EXISTS `login` (
   `usuario` varchar(50) NOT NULL,
   `senha` varchar(20) NOT NULL,
@@ -21,6 +34,9 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`usuario`, `senha`, `id`, `loginusuario`) VALUES
 ('Pedro Campos Novais', 'Tigrenegro000', 1, '1');
+
+INSERT INTO `login` (`usuario`, `senha`, `id`, `loginusuario`) VALUES
+('Visitante', '000', 2, '2');
 
 CREATE TABLE IF NOT EXISTS `contato` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
