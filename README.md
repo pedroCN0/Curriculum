@@ -1,2 +1,2 @@
 # Curriculum
- Projeo de currículo digital em PHP integrado com BD
+ Projeto de currículo digital em PHP integrado com BD
